@@ -7,6 +7,7 @@ CONFIGS=(waybar helix wofi sway foot)
 LOCAL_NIX_CONFIG="$SCRIPT_DIR/etc/nixos/configuration.nix"
 ETC_NIX_CONFIG="/etc/nixos/configuration.nix"
 
+chmod a-w "$LOCAL_NIX_CONFIG"
 sudo rm "$ETC_NIX_CONFIG"
 echo "removed ${ETC_NIX_CONFIG}"
 
