@@ -4,7 +4,8 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-output * mode 2560x1440@165Hz
+#output * mode 2560x1440@165Hz
+output * mode 1920x1080@165Hz
 
 gaps inner 10
 gaps outer 5
