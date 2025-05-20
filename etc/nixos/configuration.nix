@@ -46,44 +46,17 @@
   
   # Additional packages
   environment.systemPackages = with pkgs; [
-    # wm
-    swaylock
-    swayidle
-    swaynotificationcenter
-    swaysettings
-    networkmanagerapplet
-    waybar
-    wofi
-    grim
-    jq
-    wl-clipboard
-
-    # utils
     firefox
     git
-    unzip
-    helix
-
-    # looks
-    adwaita-icon-theme
-  ];
-
-  fonts.packages = with pkgs; [
-    nerdfonts
   ];
 
   # Gui
-  services.gnome.gnome-keyring.enable = true;
-
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-  };
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
   
   # User apps
   services.flatpak.enable = true;
-
-  # File managment
 
   # Firewall
   networking.firewall.enable = true;
